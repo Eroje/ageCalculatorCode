@@ -1,0 +1,22 @@
+// Write your function here:
+
+function howOld(age, year) {
+  const currentYear = new Date().getFullYear(); //Call the get full year function on the new date function
+  const calculatedAge = age + (year - currentYear);
+
+  if (year > currentYear) {
+    return `You will be ${calculatedAge} in the year ${year}`;
+  } else if (year < currentYear - age) {
+    const calculatedYearsBefore = currentYear - age - year;
+    return `The year ${year} was ${calculatedYearsBefore} years before you were born`;
+  } else {
+    return `You were ${calculatedAge} in the year ${year}`;
+  }
+}
+
+console.log(howOld(42, 2030));
+
+
+
+
+// Once your function is written, write function calls to test your code!
